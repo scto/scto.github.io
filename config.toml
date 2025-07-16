@@ -1,41 +1,79 @@
-title = "Notre-Dame de Paris"
-baseURL = "https://gohugo-theme-ananke.pages.dev"
-languageCode = "en-us"
-theme = ["github.com/theNewDynamic/gohugo-theme-ananke"]
-resourceDir = "../resources"
+baseURL = "https://scto.github.io/"
+languageCode = "de"
+defaultContentLanguage = "de"
 
-DefaultContentLanguage = "en"
-SectionPagesMenu = "main"
-Paginate = 3                  # this is set low for demonstrating with dummy content. Set to a higher number
-googleAnalytics = ""
-enableRobotsTXT = true
-
-[languages]
-[languages.en]
-title = "Ananke"
-weight = 1
-contentDir = "content/en"
-# languageDirection = 'rtl' for Right-To-Left languages
-[languages.fr]
-title = "Ananke Fr"
-weight = 2
-contentDir = "content/fr"
-
-[sitemap]
-changefreq = "monthly"
-priority = 0.5
-filename = "sitemap.xml"
+title = "ScTo's Development Site"
+theme = "hugo-theme-relearn"
+themesdir = "./themes"
+publishdir = "docs"
+metaDataFormat = "yaml"
+defaultContentLanguageInSubdir = true
+relativeURLs = true
 
 [params]
-text_color = ""
-author = ""
-favicon = ""
-site_logo = ""
-description = "The last theme you'll ever need. Maybe."
-# choose a background color from any on this page: https://tachyons.io/docs/themes/skins/ and preface it with "bg-"
-background_color_class = "bg-black"
-recent_posts_number = 3
+  editURL = "https://github.com/scto/scto.github.io/tree/main/content/"
+  description = "SCTO bietet Softwareentwicklung."
+  author = "scto"
+  showVisitedLinks = true
+  disableBreadcrumb = false
+  disableNextPrev = false
+  disableLandingPageButton = true
+  disableMermaid = false
+  titleSeparator = "-"
+  themeVariant = "scto"
+  additionalContentLanguage = [ "de", "en" ]
 
-[[params.ananke_socials]]
-name = "twitter"
-url = "https://twitter.com/GoHugoIO"
+[outputs]
+  home = ["HTML", "RSS", "PRINT", "JSON"]
+  section = ["HTML", "RSS", "PRINT"]
+  page = ["HTML", "RSS", "PRINT"]
+
+[markup]
+  [markup.highlight]
+    style = "monokai"
+
+[markup.goldmark.renderer]
+  unsafe= true
+
+[module]
+  [module.hugoVersion]
+    min = "0.25"
+
+[Languages]
+  [Languages.en]
+    title = "SCTO Portal"
+    weight = 1
+    languageName = "English"
+    landingPageURL = "/en"
+    landingPageName = "<i class='fas fa-home'></i> Home"
+
+  [[Languages.en.menu.shortcuts]]
+    name = "<i class='fas fa-fw fa-globe-europe'></i> Pamasol Official Website"
+    identifier = "sctoWebsite"
+    url = "https://scto.github.io/"
+    weight = 10
+
+  [[Languages.en.menu.shortcuts]]
+    name = "<i class='fab fa-fw fa-github'></i> Pamasol on GitHub"
+    identifier = "sctoGitHub"
+    url = "https://github.com/scto/"
+    weight = 30
+
+  [Languages.de]
+    title = "SCTO Portal"
+    weight = 1
+    languageName = "Deutsch"
+    landingPageURL = "/de/"
+    landingPageName = "<i class='fas fa-home'></i> Startseite"
+
+  [[Languages.de.menu.shortcuts]]
+    name = "<i class='fas fa-fw fa-globe-europe'></i> Offizielle Webseite von scto"
+    identifier = "sctoWebsite"
+    url = "https:///scto.github.io/"
+    weight = 10
+
+  [[Languages.de.menu.shortcuts]]
+    name = "<i class='fab fa-fw fa-github'></i> SCTO auf GitHub"
+    identifier = "sctoGitHub"
+    url = "https://github.com/scto/"
+    weight = 30

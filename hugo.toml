@@ -1,4 +1,0 @@
-baseURL = 'https://scto.github.io/'
-languageCode = 'de-de'
-title = 'My New Hugo site scto'
-theme = 'docs'

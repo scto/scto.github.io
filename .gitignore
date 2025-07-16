@@ -1,0 +1,2 @@
+# Do not include root folder "docs" that appears when run "hugo -D" locally.
+/docs
