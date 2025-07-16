@@ -1,8 +1,4 @@
 baseURL = 'https://scto.github.io/'
 languageCode = 'de-de'
 title = 'My New Hugo site scto'
-theme = 'ananke'
-
-[caches]
-  [caches.images]
-    dir = ':cacheDir/images'
+theme = 'docs'
